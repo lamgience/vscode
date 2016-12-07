@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas-1</title>
+</head>
+<body>
+<h2>Canvas 画圆 </h2>
+<canvas id ="Circle" width="400" height="300">  你的浏览器不支持html5 canvas 标签</canvas>
+<script type="text/javascript">
+    var  c=document.getElementById("Circle");
+    var  ctx= c.getContext("2d");
+    var  width = c.width;
+    var  height = c.height;
+     var  x0ff= width*0.5;
+    var y0ff=height*0.5;
+
+    ctx.beginPath();
+    ctx.strokeStyle="black";   ctx.arc(x0ff,y0ff,50,0,Math.PI*2,true);
+
+    /*
+    括号内第一个和第二个参数,代表圆心坐标.
+    第三个参数是圆的半径.
+    第四个参数代表圆周起始位置.0 PI就是起始位置.沿顺时针路线,分别是0.5 PI（正下方）,1 PI和1.5 PI（正上方）,为画饼图提供了扇形范围的依据
+    .第五个参数是弧长Math.PI*2就是整个圆,Math.PI是半圆.
+    第六个参数是一个布尔值,true是顺时针false是顺时针.
+  */
+    ctx.stroke();
+
+</script>
+</body>
+</html>
